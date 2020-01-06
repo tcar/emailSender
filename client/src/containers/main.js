@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import validator from "validator";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import ListItemText from '@material-ui/core/ListItemText';
+import EmailList from '../components/EmailList'
 import axios from "axios";
 import { Grid } from "@material-ui/core";
 
@@ -25,7 +25,7 @@ export default class Main extends Component {
 
   render() {
     let emails = this.state.emails.map(email => {
-      return <h3>{email}</h3>;
+      return <ListItemText>{email}</ListItemText>;
     });
     return (
       <Grid container>
@@ -65,7 +65,7 @@ export default class Main extends Component {
           </Button>
         </Grid>
         <Grid item xs={12}>
-          <List>{emails}</List>
+          <EmailList emails = {emails}/>
           <Button
             variant="contained"
             color="primary"
@@ -81,7 +81,6 @@ export default class Main extends Component {
   }
 
   handleChange(e) {
-    console.log(this.state);
     this.setState({ error: { isError: false, text: "" } });
     const value = e.target.value;
     this.setState({ email: value });
