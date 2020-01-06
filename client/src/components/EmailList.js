@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import List from "@material-ui/core/List"
+import List from "@material-ui/core/List";
 
+const EmailList = props => {
+  return <List>{props.emails}</List>;
+};
 
-const EmailList = (props) => {return <List>{props.emails}</List>}
-
-export default EmailList
+export default EmailList;

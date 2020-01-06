@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import validator from "validator";
-import ListItemText from '@material-ui/core/ListItemText';
-import EmailList from '../components/EmailList'
+import ListItemText from "@material-ui/core/ListItemText";
+import EmailList from "../components/EmailList";
 import axios from "axios";
 import { Grid } from "@material-ui/core";
 
@@ -65,7 +65,7 @@ export default class Main extends Component {
           </Button>
         </Grid>
         <Grid item xs={12}>
-          <EmailList emails = {emails}/>
+          <EmailList emails={emails} />
           <Button
             variant="contained"
             color="primary"
